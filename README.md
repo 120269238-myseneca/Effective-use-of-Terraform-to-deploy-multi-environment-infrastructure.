@@ -11,6 +11,16 @@ The Architecture:
 </div>
 
 
+## Warning: Image Guidance
+
+The images provided in this document are meant to serve as a visual guide to help you understand what the output should look like after running the code. Please take note of the following:
+
+- The images are illustrative and meant for guidance only.
+- The white highlighted or redacted parts in the images are intentionally placed to hide sensitive information such as API keys, IP addresses, and other confidential data.
+- Ensure to replace any placeholders or redacted information with your own valid credentials and data.
+
+
+Please follow the instructions carefully, and use the images as a reference to verify that you are on the right track.
 
 
 ## Prerequisites
