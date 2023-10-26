@@ -7,7 +7,7 @@ Welcome to AWS Terraform Deployment Guide! Follow the instructions below to set 
 
 The Architecture:
 
-![image](https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./assets/63743435/d3a3547c-874f-4f57-b589-67a399c9a49c)
+![image](https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./assets/63743435/d3a3547c-874f-4f57-b589-67a399c9a49c)<width="300">
 
 
 
@@ -26,7 +26,11 @@ Before we start, make sure you have the following:
      cd Final/staging/webservers
      ssh-keygen -t rsa -f assignment-staging
      ```
-     Press "Enter" until the process is complete.
+    - Press "Enter" until the process is complete.
+
+     ![image](https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./assets/63743435/de041a92-3bf1-4690-bb22-9be068dbdb6e)
+
+       
    - Create new SSH keys for prod-vpc, by run the code:
      ```
      cd ../../prod/webservers
