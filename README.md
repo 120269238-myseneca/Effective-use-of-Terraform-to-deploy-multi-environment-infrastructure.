@@ -159,9 +159,7 @@ cd ../../staging/webservers
    - Replace `BASTION_HOST_PUBLIC_IP` with the actual public IP of your Bastion host. The public IP can be found either from when you deployed the staging Web Servers, or by going to the EC2 instance section on AWS and finding the `assignment-staging-bastion` instance. Click on the instance, and note the public IPv4 address.
 
 <div align="center">
-  <img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture7.png" width="500" alt="Finding
-
- Bastion Host Public IP">
+  <img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture7.png" width="500" alt="Finding Bastion Host Public IP">
 </div>
 
 - Transfer the SSH keys:
