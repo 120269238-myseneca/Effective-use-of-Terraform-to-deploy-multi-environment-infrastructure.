@@ -28,9 +28,10 @@ Before we start, make sure you have the following:
      ssh-keygen -t rsa -f assignment-staging
      ```
     - Press "Enter" until the process is complete.
-  
+
+
 <div align="center">
-<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture15.png" width="500" alt="Alt text">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture1.png" width="500" alt="Alt text">
 </div>
 
 
@@ -41,9 +42,10 @@ Before we start, make sure you have the following:
      ssh-keygen -t rsa -f assignment-prod
      ```
      Press "Enter" until the process is complete.
+
      
 <div align="center">
-<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture1.png" width="500" alt="Alt text">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture2.png" width="500" alt="Alt text">
 </div>
 
 
@@ -63,6 +65,12 @@ Reminder come back to "Final" Folder:
    terraform apply -auto-approve
    ```
 
+   
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture3.png" width="500" alt="Alt text">
+</div>
+
+
 2. **Deploy the PROD VPC Network**:
    ```sh
    cd ../../prod/network
@@ -71,6 +79,11 @@ Reminder come back to "Final" Folder:
    terraform plan
    terraform apply -auto-approve
    ```
+
+
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture4.png" width="500" alt="Alt text">
+</div> 
 IMPORANT: Only when the Staging and Prod VPC is deploy , then run next code
 
 
@@ -92,6 +105,12 @@ IMPORANT: Only when the Staging and Prod VPC is deploy , then run next code
    terraform apply -auto-approve
    ```
 
+   
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture5.png" width="500" alt="Alt text">
+</div>
+
+
 5. **Deploy the PROD Web Servers**:
    ```sh
    cd ../../prod/webservers
@@ -100,6 +119,10 @@ IMPORANT: Only when the Staging and Prod VPC is deploy , then run next code
    terraform plan
    terraform apply -auto-approve
    ```
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture6.png" width="500" alt="Alt text">
+</div>
+
 
 ## Accessing VMs via Bastion Host
 Reminder come back to "Final/staging/webservers" Folder by running below code after deploy of Prod Web Servers
@@ -109,7 +132,14 @@ Reminder come back to "Final/staging/webservers" Folder by running below code af
    ```
 
 1. **Transfer SSH Keys to Bastion Host**:
-   Replace `BASTION_HOST_PUBLIC_IP` with the actual public IP of your Bastion host. The public IP can be found either from when you deploy staging Web Servers, or go EC2 instance and find assignment-staging-bastion instance. Click on instance, and see the public IPv4 address. 
+   Replace `BASTION_HOST_PUBLIC_IP` with the actual public IP of your Bastion host. The public IP can be found either from when you deploy staging Web Servers, or go EC2 instance and find assignment-staging-bastion instance. Click on instance, and see the public IPv4 address.
+
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture7.png" width="500" alt="Alt text">
+</div>
+
+
+
 (Also after running first script, they will ask Are you sure you want to continue connecting (yes/no)?  
 Enter: Yes)
 
@@ -118,12 +148,23 @@ Enter: Yes)
    scp -i assignment-staging ../../prod/webservers/assignment-prod ec2-user@BASTION_HOST_PUBLIC_IP:/home/ec2-user/
    ```
 
-2. **SSH into Bastion Host**:
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture8.png" width="500" alt="Alt text">
+</div>
+
+
+3. **SSH into Bastion Host**:
    ```sh
    ssh -i assignment-staging ec2-user@BASTION_HOST_PUBLIC_IP
    ```
 
-3. **Connect to VMs**:
+
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture10.png" width="500" alt="Alt text">
+</div>
+
+
+4. **Connect to VMs**:
    - Replace `VM2_PRIVATE_IP` with the actual private IP of VM2 .Connecting to VM2. 
 
 
@@ -131,7 +172,14 @@ Enter: Yes)
      chmod 400 assignment-staging
      ssh -i assignment-staging ec2-user@VM2_PRIVATE_IP
      ```
+
+
 - After running last given script, it will say "Are you sure you want to continue connecting (yes/no)?" Enter Yes
+
+
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture11.png" width="500" alt="Alt text">
+</div>
 
 
  - After connecting to run website:
@@ -139,6 +187,13 @@ Enter: Yes)
      exit
      curl http://VM2_PRIVATE_IP
       ```
+
+
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture12.png" width="500" alt="Alt text">
+</div>
+
+
    - For VM3
    Replace `VM3_PRIVATE_IP` with the actual private IP of VM3 :
      ```sh
@@ -148,11 +203,21 @@ Enter: Yes)
    - After running last given script, it will say "Are you sure you want to continue connecting (yes/no)?" Enter Yes
    - Once sucessful connect, exit by writing `exit` in terminal 
 
+
+   <div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture13.png" width="500" alt="Alt text">
+</div>
+
+
       Replace `VM4_PRIVATE_IP` with the actual private IP of VM4:
      ```sh
      ssh -i /home/ec2-user/assignment-prod ec2-user@VM4_PRIVATE_IP
      ```
    - After running last given script, it will say "Are you sure you want to continue connecting (yes/no)?" Enter Yes
+
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture14.png" width="500" alt="Alt text">
+</div>
 
    - Once sucessful connect, exit by writing `exit` in terminal. Then you will exit the VM3. Now write   `exit` again to exit the Bastion Host.
 ## Cleanup
