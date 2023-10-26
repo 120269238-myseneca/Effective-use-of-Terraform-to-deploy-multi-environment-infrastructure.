@@ -4,8 +4,11 @@ Made by Sudeep Saurabh
 # Effective use of Terraform to deploy multi-environment infrastructure.
 
 Welcome to AWS Terraform Deployment Guide! Follow the instructions below to set up and deploy your AWS infrastructure using Terraform. There are imagie to help you see what result you should get. 
-![image](https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./assets/63743435/6412ba50-9802-4550-abce-9187e165cc6f)
 
+--
+![image](https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./assets/63743435/6aef6e24-172e-4de5-a2d5-03e19877e622)
+
+--
 
 ## Prerequisites
 
