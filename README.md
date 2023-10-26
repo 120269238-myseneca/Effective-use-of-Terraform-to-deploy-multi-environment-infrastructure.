@@ -6,8 +6,9 @@ Made by Sudeep Saurabh
 Welcome to AWS Terraform Deployment Guide! Follow the instructions below to set up and deploy your AWS infrastructure using Terraform.  
 
 The Architecture:
-
-![image](https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./assets/63743435/d3a3547c-874f-4f57-b589-67a399c9a49c)<width="300">
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture15.png" width="500" alt="Alt text">
+</div>
 
 
 
@@ -27,8 +28,11 @@ Before we start, make sure you have the following:
      ssh-keygen -t rsa -f assignment-staging
      ```
     - Press "Enter" until the process is complete.
+  
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture15.png" width="500" alt="Alt text">
+</div>
 
-     ![image](https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./assets/63743435/de041a92-3bf1-4690-bb22-9be068dbdb6e)
 
        
    - Create new SSH keys for prod-vpc, by run the code:
@@ -37,6 +41,12 @@ Before we start, make sure you have the following:
      ssh-keygen -t rsa -f assignment-prod
      ```
      Press "Enter" until the process is complete.
+     
+<div align="center">
+<img src="https://github.com/SuTiger6/Effective-use-of-Terraform-to-deploy-multi-environment-infrastructure./blob/main/image/Picture1.png" width="500" alt="Alt text">
+</div>
+
+
 
 ## Deployment Steps  
 Reminder come back to "Final" Folder: 
